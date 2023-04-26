@@ -1,34 +1,42 @@
 import React from 'react'
 import classes from './DummyMeals.module.css'
+import Card from '../UI/Card'
+import MealItem from './MealsItem/MealItem'
+
 
 const DummyMeals = () => {
     const dummymeals = [
-        {Name:'Sushi',
+        {id:1,
+          Name:'Sushi',
          description:'finest fish and veggis',
-         amount:'20$'},
+         amount:20},
 
-         {Name:'Schniztle',
+         {id:2,
+          Name:'Schniztle',
          description:'A german speciality!',
-         amount:'25$'},
+         amount:25},
 
-         {Name:'Barbecue Burger',
+         {
+          id:3,
+          Name:'Barbecue Burger',
          description:'American, raw, meaty',
-         amount:'30$'},
+         amount:30},
 
-         {Name:'Green Bowl',
+         {id:4,
+          Name:'Green Bowl',
          description:'Healthy and green',
-         amount:'12$'}
+         amount:12}
     ]
   return (
-    <div className={classes['main-div']}>
+    <section className={classes.meals}>
+      <Card>
+      <ul>
         {dummymeals.map(meal=>(
-            <li className={classes.li}>
-            <h4 className={classes.h4}>{meal.Name}</h4>
-            <span className={classes.description}>{meal.description}</span>
-            <span>{meal.amount}</span>
-            </li>
+            <MealItem key={meal.id} meals={meal}/>
         ))}
-    </div>
+        </ul>
+        </Card>
+    </section>
   )
 }
 export default DummyMeals;

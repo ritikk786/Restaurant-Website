@@ -1,10 +1,12 @@
 import Header from "./Components/Layout/Header";
-import DummyMeals from "./Components/Meals/DummyMeals";
+import Meals from "./Components/Meals/Meals";
 function App() {
   return (
     <div>
       <Header/>
-      <DummyMeals/>
+      <main>
+        <Meals/>
+      </main>
     </div>
   );
 }
