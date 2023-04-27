@@ -7,19 +7,19 @@ import Modal from '../UI/Modal'
     <ul className={classes['cart-items']}>
       {[
         {id:1, name:'sushi', amount:2, price:12}
-      ].map((item)=>(<li>{item.name}</li>))}
+      ].map((item)=>(<li key={item.id}>{item.name}</li>))}
     </ul>
   
   return (
-    <Modal>
+    <Modal onClose={props.onClose}>
       {cartItem}
       <div className={classes.total}>
       <span>Total amount</span>
       <span>24</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button--alt']}>Cancel</button>
-        <button className={classes.button}>Order</button>
+        <button className={classes['button--alt']}  onClick={props.onClose}>Cancel</button>
+        <button className={classes.button} >Order</button>
       </div>
     </Modal>
   )
