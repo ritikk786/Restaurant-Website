@@ -9,23 +9,23 @@ const DummyMeals = () => {
         {id:1,
           Name:'Sushi',
          description:'finest fish and veggis',
-         amount:20},
+         price:20},
 
          {id:2,
           Name:'Schniztle',
          description:'A german speciality!',
-         amount:25},
+         price:25},
 
          {
           id:3,
           Name:'Barbecue Burger',
          description:'American, raw, meaty',
-         amount:30},
+         price:30},
 
          {id:4,
           Name:'Green Bowl',
          description:'Healthy and green',
-         amount:12}
+         price:12}
     ]
   return (
     <section className={classes.meals}>
