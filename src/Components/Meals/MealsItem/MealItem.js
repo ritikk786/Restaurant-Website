@@ -12,7 +12,7 @@ import MealItemForm from './MealItemForm'
             <div className={classes.price}>{price}</div>
         </div>
         <div>
-            <MealItemForm/>
+            <MealItemForm items={props.meals}/>
         </div>
     </li>
   )
